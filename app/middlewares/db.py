@@ -20,6 +20,5 @@ class DatabaseMiddleware(BaseMiddleware):
         async with self.session() as session:
             db = Database(session=session)
             data['db'] = db
-            result = await handler(event, data)
-            del data['db']
-            return result
+            return await handler(event, data)
+            
