@@ -2,3 +2,5 @@ database.db
 .env
 venv
 __pycache__/
+.bot_data
+.db_data
