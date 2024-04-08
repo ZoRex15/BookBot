@@ -12,7 +12,7 @@ from app.middlewares import DatabaseMiddleware
 
 async def main():
     config: Config = load_config()
-    engine = create_async_engine(url=config.db_url, echo=True)
+    engine = create_async_engine(url=config.db.url, echo=True)
     session = async_sessionmaker(engine, expire_on_commit=False)
 
     bot = Bot(token=config.tg_bot.token, parse_mode='HTML')

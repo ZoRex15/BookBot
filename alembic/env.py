@@ -27,7 +27,7 @@ settings: Config = load_config()
 target_metadata = Base.metadata
 config.set_main_option(
     'sqlalchemy.url',
-    settings.db_url
+    settings.db.url
 )
 
 # other values from the config, defined by the needs of env.py,
